@@ -2,7 +2,7 @@ import requests, json
 from lxml import etree
 import os
 
-class egov_low :
+class egov_law :
 
     save_folder = None
 
