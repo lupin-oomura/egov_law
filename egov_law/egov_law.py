@@ -188,7 +188,7 @@ class egov_law :
         return dic
 
 if __name__ == '__main__' :
-    egovlow = egov_low()
+    egovlow = egov_law()
     egovlow.set_save_folder("data_20240815")
 
     dic_laws = egovlow.get_law_dict(category=2, f_save=True) # category 1:全法令, 2:憲法・法律, 3:政令・勅令, 4:府省令
@@ -197,7 +197,7 @@ if __name__ == '__main__' :
     chk_id = '345AC0000000139'
     f_pass = True
     for law_id, itm in dic_laws.items() :
-        if law_id == chk_id :
+        if law_id == chk_id or not chk_id :
             f_pass = False
         if f_pass == False :
             print(f"---{law_id}({itm})---------------")
