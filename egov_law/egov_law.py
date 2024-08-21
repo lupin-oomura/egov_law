@@ -31,7 +31,7 @@ class egov_law :
         names = [e.text for e in root.xpath(".//LawName")]
         ids = [e.text for e in root.xpath(".//LawId")]
         numbers = [e.text for e in root.xpath(".//LawNo")]
-        dic = {id: {name: num} for (id, name, num) in zip(ids, names, numbers)}
+        dic = {id: {"name": name, "number": num} for (id, name, num) in zip(ids, names, numbers)}
 
         if f_save == True :
             fn = f"law_list.json"
